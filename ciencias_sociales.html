@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciencias Sociales</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        .feature {
+            margin-bottom: 20px; /* Añade espacio entre cada elemento */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ciencias Sociales: Comprendiendo la Sociedad</h1>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <h2>¿Qué son las Ciencias Sociales?</h2>
+            <p>Las ciencias sociales estudian el comportamiento humano y las estructuras sociales, incluyendo la sociología, la antropología, la economía y la ciencia política.</p>
+        </div>
+        <div class="feature">
+            <h2>Importancia de las Ciencias Sociales</h2>
+            <p>Las ciencias sociales nos ayudan a comprender cómo funcionan las sociedades y a abordar problemas sociales complejos, como la pobreza, la desigualdad y el cambio climático.</p>
+        </div>
+        <div class="feature">
+            <h2>Aplicaciones en la Actualidad</h2>
+            <p>Las ciencias sociales tienen aplicaciones en una amplia variedad de campos, incluyendo la educación, la política, el trabajo social y la planificación urbana.</p>
+        </div>
+        <div class="feature">
+            <h2>Subir y Reproducir Video</h2>
+            <input type="file" id="videoInput" accept="video/*">
+            <video controls id="videoPlayer">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </section>
+
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const objectURL = URL.createObjectURL(file);
+            videoPlayer.src = objectURL;
+        });
+    </script>
+</body>
+</html>

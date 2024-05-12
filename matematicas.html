@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.feature {
+    margin-bottom: 20px; /* Añade espacio entre cada elemento */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Matemáticas: Fundamentos y Aplicaciones</h1>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <h2>¿Qué son las Matemáticas?</h2>
+            <p>Las matemáticas son una ciencia que estudia las propiedades y relaciones de los números, las figuras geométricas y otros objetos abstractos. A lo largo de la historia, las matemáticas han sido fundamentales en diversos campos del conocimiento y han contribuido al desarrollo de la humanidad.</p>
+        </div>
+        <div class="feature">
+            <h2>Importancia de las Matemáticas</h2>
+            <p>Las matemáticas tienen una gran importancia en nuestra vida cotidiana y en el avance de la sociedad. Algunas de las áreas en las que las matemáticas son fundamentales incluyen:</p>
+            <ul>
+                <li><strong>Ciencia y Tecnología:</strong> Las matemáticas son la base de muchas disciplinas científicas y tecnológicas, como la física, la ingeniería y la informática.</li>
+                <li><strong>Economía y Finanzas:</strong> Las matemáticas juegan un papel crucial en el análisis financiero, la gestión de riesgos y la economía en general.</li>
+                <li><strong>Medicina y Ciencias de la Salud:</strong> En medicina, las matemáticas se utilizan para modelar procesos biológicos, analizar datos médicos y desarrollar algoritmos para diagnósticos y tratamientos.</li>
+                <li><strong>Ciencias Sociales:</strong> En áreas como la sociología y la psicología, las matemáticas se utilizan para analizar datos y realizar investigaciones cuantitativas.</li>
+            </ul>
+        </div>
+        <div class="feature">
+            <h2>Aplicaciones en la Actualidad</h2>
+            <p>En la actualidad, las matemáticas están presentes en numerosos aspectos de nuestra vida diaria. Desde el uso de algoritmos en redes sociales hasta la criptografía utilizada en transacciones financieras en línea, las matemáticas son una parte esencial de la sociedad moderna.</p>
+        </div>
+        <div class="feature">
+            <h2>Subir y Reproducir Video</h2>
+            <input type="file" id="videoInput" accept="video/*">
+            <video controls id="videoPlayer">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </section>
+    
+
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const objectURL = URL.createObjectURL(file);
+            videoPlayer.src = objectURL;
+        });
+    </script>
+</body>
+</html>

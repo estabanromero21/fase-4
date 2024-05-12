@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglés</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        .feature {
+            margin-bottom: 20px; /* Añade espacio entre cada elemento */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inglés: Idioma Universal</h1>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <h2>¿Qué es el Inglés?</h2>
+            <p>El inglés es un idioma germánico que se habla en todo el mundo como lengua nativa o segunda lengua. Es el idioma más utilizado en los negocios internacionales y en la comunicación en línea.</p>
+        </div>
+        <div class="feature">
+            <h2>Importancia del Inglés</h2>
+            <p>El inglés es el idioma de la ciencia, la tecnología, la diplomacia y el entretenimiento global. Dominar el inglés puede abrir puertas a oportunidades educativas y profesionales en todo el mundo.</p>
+        </div>
+        <div class="feature">
+            <h2>Aplicaciones en la Actualidad</h2>
+            <p>El inglés es utilizado en una amplia variedad de campos profesionales, incluyendo el turismo, la aviación, la informática y la investigación científica.</p>
+        </div>
+        <div class="feature">
+            <h2>Subir y Reproducir Video</h2>
+            <input type="file" id="videoInput" accept="video/*">
+            <video controls id="videoPlayer">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </section>
+
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const objectURL = URL.createObjectURL(file);
+            videoPlayer.src = objectURL;
+        });
+    </script>
+</body>
+</html>

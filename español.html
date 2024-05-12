@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Español</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        .feature {
+            margin-bottom: 20px; /* Añade espacio entre cada elemento */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Español: Lengua y Literatura</h1>
+    </header>
+    <section class="features">
+        <div class="feature">
+            <h2>¿Qué es el Español?</h2>
+            <p>El español es una lengua romance que se habla en numerosos países alrededor del mundo. Es el idioma oficial de España y la mayoría de los países de América Latina.</p>
+        </div>
+        <div class="feature">
+            <h2>Importancia del Español</h2>
+            <p>El español es una de las lenguas más habladas del mundo y es esencial para la comunicación en una amplia variedad de contextos, incluyendo negocios, viajes, educación y cultura.</p>
+        </div>
+        <div class="feature">
+            <h2>Aplicaciones en la Actualidad</h2>
+            <p>El español es utilizado en una variedad de campos profesionales y culturales, desde la traducción y la interpretación hasta la literatura, el cine y la música.</p>
+        </div>
+        <div class="feature">
+            <h2>Subir y Reproducir Video</h2>
+            <input type="file" id="videoInput" accept="video/*">
+            <video controls id="videoPlayer">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </section>
+
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const objectURL = URL.createObjectURL(file);
+            videoPlayer.src = objectURL;
+        });
+    </script>
+</body>
+</html>
